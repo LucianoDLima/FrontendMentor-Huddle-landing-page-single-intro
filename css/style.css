@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Screen reader only, for accessibility when needed */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans";
+  background-color: hsl(257deg, 40%, 49%);
+  margin-inline: auto;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
+@media only screen and (min-width: 750px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-position: center 0;
+    max-width: 750px;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  body {
+    max-width: 1345px;
+  }
+}
+
+h2 {
+  font-family: "Poppins";
+}
+
+#title {
+  padding-block: 3.15rem 5.5rem;
+  padding-inline: 3.5rem;
+}
+@media only screen and (min-width: 1140px) {
+  #title {
+    padding-block: 5.4rem 8.1rem;
+  }
+}
+#title img {
+  width: 21.5rem;
+}
+
+main {
+  padding-bottom: 4rem;
+}
+
+#container {
+  padding-inline: 3.5rem;
+}
+
+@media only screen and (min-width: 1140px) {
+  .container__main {
+    display: grid;
+    column-gap: 5.5rem;
+    grid-template-columns: 1.37fr 1fr;
+    margin-bottom: 2rem;
+  }
+}
+
+.container__image {
+  max-width: 1000px;
+  margin-bottom: 5.5rem;
+}
+@media only screen and (min-width: 1140px) {
+  .container__image {
+    margin-bottom: unset;
+  }
+}
+.container__image img {
+  width: 100%;
+}
+
+.container__intro {
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 6.5rem;
+}
+@media only screen and (min-width: 1140px) {
+  .container__intro {
+    text-align: unset;
+    margin-bottom: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4.25rem;
+  }
+}
+.container__intro h2 {
+  font-size: 2.39rem;
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 1140px) {
+  .container__intro h2 {
+    font-size: calc(2.39rem + 1.6rem);
+    margin-bottom: 2.2rem;
+  }
+}
+.container__intro p {
+  line-height: 1.5;
+  margin-bottom: 2.3rem;
+}
+@media only screen and (min-width: 1140px) {
+  .container__intro p {
+    font-size: calc(16px + .2rem);
+    margin-bottom: 2.2rem;
+  }
+}
+.container__intro button {
+  font-size: 1.3rem;
+  color: hsl(257deg, 40%, 49%);
+  padding: 1.1rem 7.6rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1140px) {
+  .container__intro button {
+    font-size: 1.9rem;
+    padding: 1.5rem 6.5rem;
+    border-radius: 4rem;
+  }
+}
+.container__intro button:hover {
+  outline: 3px solid hsl(300deg, 69%, 71%);
+  outline-offset: -2px;
+  transform: scale(1.2);
+  background-color: transparent;
+  color: hsl(300deg, 69%, 71%);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.container__footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 1140px) {
+  .container__footer {
+    justify-content: end;
+    gap: 1.5rem;
+    transform: translateX(1rem);
+  }
+}
+.container__footer div {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1140px) {
+  .container__footer div {
+    width: 40px;
+    height: 40px;
+  }
+}
+.container__footer div:hover {
+  transform: scale(1.3);
+  border-color: hsl(300deg, 69%, 71%);
+}
+.container__footer div:hover > i {
+  color: hsl(300deg, 69%, 71%);
+}
+.container__footer div i {
+  color: white;
+  transition: all 150ms ease;
+}
+
+footer {
+  display: none;
+  position: absolute;
+  font-size: 1.5vh;
+  text-align: center;
+  top: 2%;
+  right: 2%;
+}
+@media only screen and (min-width: 750px) {
+  footer {
+    display: block;
+  }
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: hsl(300deg, 69%, 71%);
+}
+
+/*# sourceMappingURL=style.css.map */

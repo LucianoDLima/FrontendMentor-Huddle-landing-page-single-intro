@@ -1,0 +1,225 @@
+@use 'reset';
+@use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $fs-body;
+    font-family: $fm-body;
+    background-color: $violet;
+    margin-inline: auto;
+
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+    @include mq-tablet {
+        background-image: url(../images/bg-desktop.svg);
+        background-size:cover;
+        background-position: center 0;
+        max-width: $tablet;
+    }
+
+    @include mq-laptop {
+        max-width: 1345px;
+    }
+
+}
+
+h2 {
+    font-family: $fm-headings;
+}
+
+#title {
+    padding-block: 3.15rem 5.5rem;
+    padding-inline: $inline;
+
+    @include mq-laptop{
+        padding-block: 5.4rem 8.1rem;
+    }
+
+    img {
+        width: 21.5rem;
+    }
+}
+
+main {
+    padding-bottom: 4rem;
+    // margin-inline: auto;
+    // background-image: url(../images/bg-mobile.svg);
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // min-height: 100vh;
+
+    // @include mq-tablet {
+    //     background-image: url(../images/bg-desktop.svg);
+    //     background-size:cover;
+    //     background-position: center 0;
+    //     max-width: $tablet;
+    // }
+
+    // @include mq-laptop {
+    //     max-width: 1345px;
+    // }
+}
+
+
+#container {
+    padding-inline: $inline;
+
+}
+
+.container__main {
+
+    @include mq-laptop {
+        display: grid;
+        column-gap: 5.5rem;
+        grid-template-columns: 1.37fr 1fr;
+        margin-bottom: 2rem;
+    }
+}
+
+.container__image {
+    max-width: 1000px;
+    margin-bottom: 5.5rem;
+
+    @include mq-laptop {
+        margin-bottom: unset;
+    }
+    
+    img {
+        width: 100%;
+    }
+}
+
+.container__intro {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 6.5rem;
+
+    @include mq-laptop {
+        text-align: unset;
+        margin-bottom: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 4.25rem;
+    }
+
+    h2 {
+        font-size: $fs-h2;
+        margin-bottom: 1.5rem;
+
+        @include mq-laptop {
+            font-size: calc(#{$fs-h2} + 1.6rem);
+            margin-bottom: 2.2rem;
+        }
+
+    }
+
+    p {
+        line-height: 1.5;
+        margin-bottom: 2.3rem;
+
+        @include mq-laptop {
+            font-size: calc(#{$fs-body} + .2rem);
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    button {
+        font-size: 1.3rem;
+        color: $violet;
+        padding: 1.1rem 7.6rem;
+        border-radius: 2rem;
+        border: none;
+        box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .2);
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+
+        @include mq-laptop {
+            font-size: 1.9rem;
+            padding: 1.5rem 6.5rem;
+            border-radius: 4rem;
+        }
+
+        &:hover {
+            outline: 3px solid $soft-magenta;
+            outline-offset: -2px;
+            transform: scale(1.2);
+            background-color: transparent;
+            color: $soft-magenta;
+            font-weight: 600;
+            box-shadow: none;
+        }
+    }
+}
+
+.container__footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @include mq-laptop {
+        justify-content: end;
+        gap: 1.5rem;
+        transform: translateX(1rem);
+    }
+
+    div {
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 29px;
+        height: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 150ms ease;
+        cursor: pointer;
+
+        @include mq-laptop {
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            transform: scale(1.3);
+            border-color: $soft-magenta;
+        }
+
+        &:hover > i {
+            color: $soft-magenta;
+        }
+
+        i {
+            color: white;
+            transition: all 150ms ease;
+        }
+    }
+}
+
+footer {
+    display: none;
+    position: absolute;
+    font-size: 1.5vh;
+    text-align: center;
+    top: 2%;
+    right: 2%;
+
+    @include mq-tablet {
+        display: block;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: $soft-magenta;
+        }
+    }
+}
