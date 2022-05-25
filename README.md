@@ -15,6 +15,6 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-[Live Site]([https://lucianodlima.github.io/FrontendMentor-Single-price-grid/](https://lucianodlima.github.io/FrontendMentor-Huddle-landing-page-single-intro/))
+[Live Site](https://lucianodlima.github.io/FrontendMentor-Single-price-grid/](https://lucianodlima.github.io/FrontendMentor-Huddle-landing-page-single-intro/)
 
-[Solution]([https://www.frontendmentor.io/solutions/single-price-gird-sass-mobile-first-DyZgqJRfCE](https://www.frontendmentor.io/solutions/responsive-huddle-landing-page-single-intro-scss-mobile-first-EJnupk2uQQ))
+[Solution](https://www.frontendmentor.io/solutions/single-price-gird-sass-mobile-first-DyZgqJRfCE](https://www.frontendmentor.io/solutions/responsive-huddle-landing-page-single-intro-scss-mobile-first-EJnupk2uQQ)
